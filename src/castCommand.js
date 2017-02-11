@@ -1,7 +1,7 @@
 import assert from 'assert';
-import TRANSFORMERS, { NAMES as TRANSFORMERS_NAMES } from '../commands';
-import validateParam from './utils/validateParam';
-import castParam from './utils/castParam';
+import TRANSFORMERS, { NAMES as TRANSFORMERS_NAMES } from './lib/commands';
+import validateParam from './lib/utils/validateParam';
+import castParam from './lib/utils/castParam';
 
 export default function (command, args = []) {
   assert(TRANSFORMERS_NAMES.indexOf(command) > -1, `Unkown transformation "${command}"`);

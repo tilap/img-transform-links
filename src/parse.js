@@ -1,6 +1,6 @@
 import assert from 'assert';
-import { COMMAND_ARGS, ARGS, ARGS_OBJECT, COMMANDS } from '../separators';
-import convertStringToValue from './utils/convertStringToValue';
+import { COMMAND_ARGS, ARGS, ARGS_OBJECT, COMMANDS } from './lib/separators';
+import convertStringToValue from './lib/utils/convertStringToValue';
 
 export default function parse(string = '') {
   const result = [];

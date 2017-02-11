@@ -1,6 +1,6 @@
-import { COMMAND_ARGS, ARGS, ARGS_OBJECT, COMMANDS } from '../separators';
+import { COMMAND_ARGS, ARGS, ARGS_OBJECT, COMMANDS } from './lib/separators';
 import castCommand from './castCommand';
-import convertValueToString from './utils/convertValueToString';
+import convertValueToString from './lib/utils/convertValueToString';
 
 export class Generator {
   constructor() {

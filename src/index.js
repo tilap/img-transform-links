@@ -1,7 +1,7 @@
-import libUrlGenerator from './lib/url/Generator';
-import libCast from './lib/url/castCommand';
-import libParse from './lib/url/parse';
-import libBuild from './lib/url/build';
+import libUrlGenerator from './Generator';
+import libCast from './castCommand';
+import libParse from './parse';
+import libBuild from './build';
 
 export const UrlGenerator = libUrlGenerator;
 
