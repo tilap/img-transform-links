@@ -1,11 +1,4 @@
 import * as TYPES from './types';
-// LENGTH
-// INTEGER_1_99
-// GAMMA
-// STRAIGHT_ANGLE
-// FRAME_LTWH
-// FRAME_TRBL
-// SIGMA
 
 const COMMANDS = new Map([
   ['resize', new Map([
