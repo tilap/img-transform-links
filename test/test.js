@@ -9,20 +9,20 @@ const tests = new Map([
   ['rotate', new Map([
     [[], 'rotate'],
     [[90], 'rotate--90'],
-    [[90, 90], 'rotate--90'],
+    [[90, 180], 'rotate--90'],
     [[123], Error],
     [['toto'], Error],
   ])],
   ['extract', new Map([
     [[], Error],
     [[100], 'extract--100'],
-    [[100, 100], 'extract--100'],
+    [[100, 200], 'extract--100'],
     [['toto'], Error],
   ])],
   ['extractFrame', new Map([
     [[], Error],
     [[{}], Error],
-    [[{ top: 100, right: 100, left: 100, bottom: 100 }], 'extractFrame--top=100,left=100,bottom=100,right=100'],
+    [[{ top: 10, left: 20, width: 30, height: 40 }], 'extractFrame--left=20,top=10,width=30,height=40'],
   ])],
   ['flip', new Map([
     [[], 'flip'],
@@ -34,8 +34,8 @@ const tests = new Map([
   ])],
   ['sharpen', new Map([
     [[], 'sharpen--__'],
-    [[undefined, 1, 1], 'sharpen--_1_1'],
-    [[1, 1, 1], 'sharpen--1_1_1'],
+    [[undefined, 1, 2], 'sharpen--_1_2'],
+    [[1, 2, 3], 'sharpen--1_2_3'],
   ])],
   ['blur', new Map([
     [[], 'blur'],
