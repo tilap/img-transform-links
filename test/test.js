@@ -2,6 +2,7 @@
 /* eslint-disable no-restricted-syntax */
 import { expect } from 'chai';
 import { generator } from '../lib/';
+import { build } from '../lib/';
 
 expect();
 
@@ -47,6 +48,7 @@ describe('generator', () => {
   for (const [command, description] of tests) {
     describe(`command ${command}`, () => {
       for (const [args, expected] of description) {
+        // Test wordings to make it clear
         const fullArgs = [command, ...args];
         const argsStr = args.map(k => (k && k.constructor === Object ?
           `{ ${Object.keys(k).map(key => `${key}: ${k[key]}`).join(', ')} }`
@@ -59,6 +61,7 @@ describe('generator', () => {
         if (expected.constructor === String) {
           it(`output "${expected}" ${argsWording}`, () => {
             expect(generator().add(...fullArgs).toString()).to.equal(expected);
+            expect(build([fullArgs])).to.equal(expected);
           });
         } else if (expected === Error) {
           it(`throw and Error ${argsWording}`, () => {
